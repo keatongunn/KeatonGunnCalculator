@@ -49,6 +49,8 @@
             this.BinBtn = new System.Windows.Forms.Button();
             this.DecConvBtn = new System.Windows.Forms.Button();
             this.DelBtn = new System.Windows.Forms.Button();
+            this.StoredBox = new System.Windows.Forms.TextBox();
+            this.OpBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // NumBtn1
@@ -61,6 +63,7 @@
             this.NumBtn1.TabIndex = 0;
             this.NumBtn1.Text = "1";
             this.NumBtn1.UseVisualStyleBackColor = true;
+            this.NumBtn1.Click += new System.EventHandler(this.NumBtn1_Click);
             // 
             // NumBtn2
             // 
@@ -72,6 +75,7 @@
             this.NumBtn2.TabIndex = 1;
             this.NumBtn2.Text = "2";
             this.NumBtn2.UseVisualStyleBackColor = true;
+            this.NumBtn2.Click += new System.EventHandler(this.NumBtn2_Click);
             // 
             // NumBtn3
             // 
@@ -83,6 +87,7 @@
             this.NumBtn3.TabIndex = 2;
             this.NumBtn3.Text = "3";
             this.NumBtn3.UseVisualStyleBackColor = true;
+            this.NumBtn3.Click += new System.EventHandler(this.NumBtn3_Click);
             // 
             // NumBtn4
             // 
@@ -94,6 +99,7 @@
             this.NumBtn4.TabIndex = 3;
             this.NumBtn4.Text = "4";
             this.NumBtn4.UseVisualStyleBackColor = true;
+            this.NumBtn4.Click += new System.EventHandler(this.NumBtn4_Click);
             // 
             // NumBtn5
             // 
@@ -117,6 +123,7 @@
             this.NumBtn6.TabIndex = 5;
             this.NumBtn6.Text = "6";
             this.NumBtn6.UseVisualStyleBackColor = true;
+            this.NumBtn6.Click += new System.EventHandler(this.NumBtn6_Click);
             // 
             // NumBtn7
             // 
@@ -128,6 +135,7 @@
             this.NumBtn7.TabIndex = 6;
             this.NumBtn7.Text = "7";
             this.NumBtn7.UseVisualStyleBackColor = true;
+            this.NumBtn7.Click += new System.EventHandler(this.NumBtn7_Click);
             // 
             // NumBtn8
             // 
@@ -139,6 +147,7 @@
             this.NumBtn8.TabIndex = 7;
             this.NumBtn8.Text = "8";
             this.NumBtn8.UseVisualStyleBackColor = true;
+            this.NumBtn8.Click += new System.EventHandler(this.NumBtn8_Click);
             // 
             // NumBtn9
             // 
@@ -150,17 +159,21 @@
             this.NumBtn9.TabIndex = 8;
             this.NumBtn9.Text = "9";
             this.NumBtn9.UseVisualStyleBackColor = true;
+            this.NumBtn9.Click += new System.EventHandler(this.NumBtn9_Click);
             // 
             // NumDisplay
             // 
             this.NumDisplay.AccessibleDescription = "The screen that holds the current number display";
             this.NumDisplay.AccessibleName = "NumberDisplay";
-            this.NumDisplay.Location = new System.Drawing.Point(315, 55);
+            this.NumDisplay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NumDisplay.Location = new System.Drawing.Point(315, 74);
             this.NumDisplay.Multiline = true;
             this.NumDisplay.Name = "NumDisplay";
-            this.NumDisplay.Size = new System.Drawing.Size(318, 49);
+            this.NumDisplay.Size = new System.Drawing.Size(318, 30);
             this.NumDisplay.TabIndex = 9;
             this.NumDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.NumDisplay.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NumDisplay_KeyDown);
+            this.NumDisplay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumDisplay_KeyPress);
             // 
             // Clear
             // 
@@ -172,6 +185,7 @@
             this.Clear.TabIndex = 10;
             this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // DecBtn
             // 
@@ -183,6 +197,7 @@
             this.DecBtn.TabIndex = 11;
             this.DecBtn.Text = ".";
             this.DecBtn.UseVisualStyleBackColor = true;
+            this.DecBtn.Click += new System.EventHandler(this.DecBtn_Click);
             // 
             // NumBtn0
             // 
@@ -206,6 +221,7 @@
             this.EqualButton.TabIndex = 13;
             this.EqualButton.Text = "=";
             this.EqualButton.UseVisualStyleBackColor = true;
+            this.EqualButton.Click += new System.EventHandler(this.EqualButton_Click);
             // 
             // MinBtn
             // 
@@ -217,6 +233,7 @@
             this.MinBtn.TabIndex = 14;
             this.MinBtn.Text = "-";
             this.MinBtn.UseVisualStyleBackColor = true;
+            this.MinBtn.Click += new System.EventHandler(this.MinBtn_Click);
             // 
             // PlusBtn
             // 
@@ -228,6 +245,7 @@
             this.PlusBtn.TabIndex = 15;
             this.PlusBtn.Text = "+";
             this.PlusBtn.UseVisualStyleBackColor = true;
+            this.PlusBtn.Click += new System.EventHandler(this.PlusBtn_Click);
             // 
             // XBtn
             // 
@@ -239,6 +257,7 @@
             this.XBtn.TabIndex = 16;
             this.XBtn.Text = "X";
             this.XBtn.UseVisualStyleBackColor = true;
+            this.XBtn.Click += new System.EventHandler(this.XBtn_Click);
             // 
             // DivBtn
             // 
@@ -250,6 +269,7 @@
             this.DivBtn.TabIndex = 17;
             this.DivBtn.Text = "/";
             this.DivBtn.UseVisualStyleBackColor = true;
+            this.DivBtn.Click += new System.EventHandler(this.DivBtn_Click);
             // 
             // BinBtn
             // 
@@ -261,6 +281,7 @@
             this.BinBtn.TabIndex = 18;
             this.BinBtn.Text = "BIN";
             this.BinBtn.UseVisualStyleBackColor = true;
+            this.BinBtn.Click += new System.EventHandler(this.BinBtn_Click);
             // 
             // DecConvBtn
             // 
@@ -272,6 +293,7 @@
             this.DecConvBtn.TabIndex = 19;
             this.DecConvBtn.Text = "DEC";
             this.DecConvBtn.UseVisualStyleBackColor = true;
+            this.DecConvBtn.Click += new System.EventHandler(this.DecConvBtn_Click);
             // 
             // DelBtn
             // 
@@ -285,11 +307,44 @@
             this.DelBtn.UseVisualStyleBackColor = true;
             this.DelBtn.Click += new System.EventHandler(this.button11_Click);
             // 
+            // StoredBox
+            // 
+            this.StoredBox.AccessibleDescription = "The screen that holds the current number display";
+            this.StoredBox.AccessibleName = "NumberDisplay";
+            this.StoredBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.StoredBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StoredBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.StoredBox.Location = new System.Drawing.Point(315, 47);
+            this.StoredBox.Multiline = true;
+            this.StoredBox.Name = "StoredBox";
+            this.StoredBox.ReadOnly = true;
+            this.StoredBox.Size = new System.Drawing.Size(296, 30);
+            this.StoredBox.TabIndex = 21;
+            this.StoredBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // OpBox
+            // 
+            this.OpBox.AccessibleDescription = "The screen that holds the current number display";
+            this.OpBox.AccessibleName = "NumberDisplay";
+            this.OpBox.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.OpBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.OpBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OpBox.Location = new System.Drawing.Point(611, 47);
+            this.OpBox.Multiline = true;
+            this.OpBox.Name = "OpBox";
+            this.OpBox.ReadOnly = true;
+            this.OpBox.Size = new System.Drawing.Size(22, 30);
+            this.OpBox.TabIndex = 22;
+            this.OpBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(871, 450);
+            this.Controls.Add(this.OpBox);
+            this.Controls.Add(this.StoredBox);
             this.Controls.Add(this.DelBtn);
             this.Controls.Add(this.DecConvBtn);
             this.Controls.Add(this.BinBtn);
@@ -343,5 +398,7 @@
         private Button BinBtn;
         private Button DecConvBtn;
         private Button DelBtn;
+        private TextBox StoredBox;
+        private TextBox OpBox;
     }
 }
