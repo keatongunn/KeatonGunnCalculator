@@ -89,7 +89,7 @@ namespace KeatonGunnCalculator
 
         private void BinBtn_Click(object sender, EventArgs e)
         {
-            if(NumDisplay.Text.Length > 0 && IsBinary == false)
+            if(NumDisplay.Text.Length > 0 && IsBinary == false && !NumDisplay.Text.Contains('E'))
             {
                 int NumToConvert = int.Parse(NumDisplay.Text);
                 if (NumToConvert >= 0)
@@ -100,7 +100,7 @@ namespace KeatonGunnCalculator
                 }
                 if(NumToConvert < 0)
                 {
-                    NumDisplay.Text = "ERROR";                    
+                    NumDisplay.Text = "ERROR - PRESS CLEAR TO RESET";                    
                 }
                 
             }                                   
@@ -118,7 +118,7 @@ namespace KeatonGunnCalculator
             }
             else
             {
-                NumDisplay.Text = "ERROR - INVALID INPUT";
+                NumDisplay.Text = "ERROR - PRESS CLEAR TO RESET";
             }
         }
 
@@ -334,6 +334,11 @@ namespace KeatonGunnCalculator
                 PlusBtn_Click(sender, e);
                 NumDisplay.Text = "";
             }
+        }
+
+        private void LocButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

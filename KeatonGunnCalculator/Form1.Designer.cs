@@ -51,6 +51,7 @@
             this.DelBtn = new System.Windows.Forms.Button();
             this.StoredBox = new System.Windows.Forms.TextBox();
             this.OpBox = new System.Windows.Forms.TextBox();
+            this.LocButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NumBtn1
@@ -337,12 +338,26 @@
             this.OpBox.TabIndex = 22;
             this.OpBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // LocButton
+            // 
+            this.LocButton.AccessibleDescription = "Click this button to convert a positive integer to its locational string of lette" +
+    "rs";
+            this.LocButton.AccessibleName = "LocationalButton";
+            this.LocButton.Location = new System.Drawing.Point(435, 344);
+            this.LocButton.Name = "LocButton";
+            this.LocButton.Size = new System.Drawing.Size(75, 40);
+            this.LocButton.TabIndex = 23;
+            this.LocButton.Text = "LOC";
+            this.LocButton.UseVisualStyleBackColor = true;
+            this.LocButton.Click += new System.EventHandler(this.LocButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(871, 450);
+            this.Controls.Add(this.LocButton);
             this.Controls.Add(this.OpBox);
             this.Controls.Add(this.StoredBox);
             this.Controls.Add(this.DelBtn);
@@ -400,5 +415,6 @@
         private Button DelBtn;
         private TextBox StoredBox;
         private TextBox OpBox;
+        private Button LocButton;
     }
 }
